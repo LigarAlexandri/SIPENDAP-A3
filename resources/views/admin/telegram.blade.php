@@ -25,7 +25,8 @@
                         <a href="/berita"
                             class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 18 18">
                                 <path
                                     d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
                             </svg>
@@ -36,7 +37,8 @@
                         <a href="#"
                             class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 18">
                                 <path
                                     d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
                             </svg>
@@ -47,7 +49,8 @@
                         <a href="#"
                             class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 18 20">
                                 <path
                                     d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
                             </svg>
@@ -69,7 +72,8 @@
                         <a href="#"
                             class="flex items-center top-10 p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
                                 <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z" />
                                 <path
                                     d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z" />
@@ -83,7 +87,8 @@
                         <a href="/telegramadmin"
                             class="flex items-center top-10 p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
                                 <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z" />
                                 <path
                                     d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z" />
@@ -134,19 +139,19 @@
 
                     <h2>Pilih Grup Telegram : </h2>
                     <select id="telegramGroup">
-                        <option value= "-1002122684774" >Grup Utama</option>
-                        <option value= "-1002097094091" >Kecamatan Panji</option>
-                        <option value= "-1002006597152" >Kecamatan Situbondo</option>
+                        <option value= "-1002122684774">Grup Utama</option>
+                        <option value= "-1002097094091">Kecamatan Panji</option>
+                        <option value= "-1002006597152">Kecamatan Situbondo</option>
                     </select>
 
                     <button type="button" id="kirim" value="KIRIM"
                         class="bg-green-500 hover:bg-green-500 text-white font-bold py-2 px-4 rounded mt-4"
-                        onclick="kirimPesan()">Kirim</button>
+                        onclick="kirimPesanadmin()">Kirim</button>
 
 
                     <button type="button" id="kirim" value="KIRIM"
-                    class="bg-green-500 hover:bg-green-500 text-white font-bold py-2 px-4 rounded mt-4"
-                    onclick="kirimPesanSemua()">Kirim ke Semua</button>
+                        class="bg-green-500 hover:bg-green-500 text-white font-bold py-2 px-4 rounded mt-4"
+                        onclick="kirimPesanSemua()">Kirim ke Semua</button>
 
                 </div>
             </div>
@@ -164,95 +169,79 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        function kirimPesanSemua(){
+        function kirimPesanSemua() {
             var judulOnly = document.getElementById('judul');
-            var isi_beritaOnly = document.getElementById('isi_berita');
             var judul = document.getElementById('judul').value;
+            var isi_beritaOnly = document.getElementById('isi_berita');
             var isi_berita = document.getElementById('isi_berita').value;
-            // var pesan = document.getElementById('thumbnail').value;
             var token = '6750609219:AAFbaG0pzoOYqfjMsx_t8jpswm5DlgYrln4'; // TELEGRAM TOKEN
-            var grup =  '-1002122684774'; // CHAT ID
-            var grup2 = '-1002097094091'; // CHAT ID
-            var grup3 = '-1002006597152'; // CHAT ID
-
+            var groups = ['-1002122684774', '-1002097094091', '-1002006597152']; // CHAT IDs
 
             // Get the file input element
             var fileInput = document.getElementById('fileInput');
             var file = fileInput.files[0];
 
-            // Create FormData object to send both text and image (Form untuk grup 1)
-            var formData = new FormData();
-            formData.append('chat_id', grup2);
-            formData.append('caption', `${judul}\n${isi_berita}`);
-            formData.append('photo', file);
+            var gabungan = `${judul}\n${isi_berita}`;
 
-            // // Create FormData object to send both text and image (Form untuk grup 2)
-            // var formData2 = new FormData2();
-            // formData.append('chat_id', grup2);
-            // formData.append('caption', `${judul}\n${isi_berita}`);
-            // formData.append('photo', file2);
+            if (file) {
+                // If file is selected, send photo with caption to each group
+                groups.forEach(function(group) {
+                    var formData = new FormData();
+                    formData.append('chat_id', group);
+                    formData.append('caption', gabungan);
+                    formData.append('photo', file);
 
-            // // Create FormData object to send both text and image (Form untuk grup 3)
-            // var formData3 = new FormData3();
-            // formData.append('chat_id', grup3);
-            // formData.append('caption', `${judul}\n${isi_berita}`);
-            // formData.append('photo', file);
-
-            var gabungan = judulOnly.value + "%0A" + isi_beritaOnly.value;
-
-            // Create XMLHttpRequest to send the data (grup 1)
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', `https://api.telegram.org/bot${token}/sendPhoto`, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        console.log('Message sent successfully.');
-                    } else {
-                        console.error('Error sending message:', xhr.status);
-                    }
-                }
-            };
-            xhr.send(formData);
-
-
-
-
-
-            $.ajax({
-                url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
-                method: `POST`,
-            })
-
-            $.ajax({
-                url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup2}&text=${gabungan}&parse_mode=html`,
-                method: `POST`,
-            })
-
-            $.ajax({
-                url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup3}&text=${gabungan}&parse_mode=html`,
-                method: `POST`,
-            })
-
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', `https://api.telegram.org/bot${token}/sendPhoto`, true);
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            if (xhr.status === 200) {
+                                console.log(`Message with photo sent successfully to group ${group}.`);
+                            } else {
+                                console.error(`Error sending message with photo to group ${group}:`, xhr
+                                .status);
+                            }
+                        }
+                    };
+                    xhr.send(formData);
+                });
+            } else {
+                // If no file is selected, send text message to each group
+                groups.forEach(function(group) {
+                    var xhrText = new XMLHttpRequest();
+                    xhrText.open('POST', `https://api.telegram.org/bot${token}/sendMessage`, true);
+                    xhrText.setRequestHeader('Content-Type', 'application/json');
+                    xhrText.onreadystatechange = function() {
+                        if (xhrText.readyState === XMLHttpRequest.DONE) {
+                            if (xhrText.status === 200) {
+                                console.log(`Text message sent successfully to group ${group}.`);
+                            } else {
+                                console.error(`Error sending text message to group ${group}:`, xhrText.status);
+                            }
+                        }
+                    };
+                    xhrText.send(JSON.stringify({
+                        chat_id: group,
+                        text: gabungan,
+                        parse_mode: 'HTML'
+                    }));
+                });
+            }
         }
 
 
-        function kirimPesan() {
+
+        function kirimPesanadmin() {
             var judulOnly = document.getElementById('judul');
-            var isi_beritaOnly = document.getElementById('isi_berita');
-
             var judul = document.getElementById('judul').value;
+            var isi_beritaOnly = document.getElementById('isi_berita');
             var isi_berita = document.getElementById('isi_berita').value;
-            // var pesan = document.getElementById('thumbnail').value;
             var token = '6750609219:AAFbaG0pzoOYqfjMsx_t8jpswm5DlgYrln4'; // TELEGRAM TOKEN
-            var grup = '-1002122684774'; // CHAT ID
-            var grup2 = '-1002097094091'; // CHAT ID
-            var grup3 = '-1002006597152'; // CHAT ID
-            // var grupList = [grup, grup2, grup3]; // Array of group IDs
 
-            //getinput telegram
+            // Get the selected Telegram group
             var selectedGroup = document.getElementById("telegramGroup").value;
 
-            // Get the file input element
+            // Get the file input element and file
             var fileInput = document.getElementById('fileInput');
             var file = fileInput.files[0];
 
@@ -260,61 +249,44 @@
             var formData = new FormData();
             formData.append('chat_id', selectedGroup);
             formData.append('caption', `${judul}\n${isi_berita}`);
-            formData.append('photo', file);
 
-            var gabungan = judulOnly.value + "%0A" + isi_beritaOnly.value;
+            if (file) {
+                formData.append('photo', file);
 
-
-            // Create XMLHttpRequest to send the data
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', `https://api.telegram.org/bot${token}/sendPhoto`, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        console.log('Message sent successfully.');
-                    } else {
-                        console.error('Error sending message:', xhr.status);
+                // Create XMLHttpRequest to send the data
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', `https://api.telegram.org/bot${token}/sendPhoto`, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            console.log('Message sent successfully.');
+                        } else {
+                            console.error('Error sending message:', xhr.status);
+                        }
                     }
-                }
-            };
-            xhr.send(formData);
-
-            // grupList.forEach(function(groupId) {
-            //     $.ajax({
-            //         url: `https://api.telegram.org/bot${token}/sendMessage`,
-            //         method: `POST`,
-            //         data: {
-            //             chat_id: groupId,
-            //             text: message,
-            //             parse_mode: 'html'
-            //         },
-            //         success: function(response) {
-            //             console.log("Message sent to group ID: " + groupId);
-            //             console.log(response);
-            //         },
-            //         error: function(xhr, status, error) {
-            //             console.error("Error sending message to group ID: " + groupId);
-            //             console.error(error);
-            //         }
-            //     });
-            // });
-
-            $.ajax({
-                url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${selectedGroup}&text=${gabungan}&parse_mode=html`,
-                method: `POST`,
-            })
-
-
-
-            // $.ajax({
-            //     url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup2}&text=${gabungan}&parse_mode=html`,
-            //     method: `POST`,
-            // })
-
-            // $.ajax({
-            //     url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup3}&text=${gabungan}&parse_mode=html`,
-            //     method: `POST`,
-            // })
+                };
+                xhr.send(formData);
+            } else {
+                // Send a regular text message if no file is selected
+                var gabungan = judulOnly.value + "\n" + isi_beritaOnly.value;
+                var xhrText = new XMLHttpRequest();
+                xhrText.open('POST', `https://api.telegram.org/bot${token}/sendMessage`, true);
+                xhrText.setRequestHeader('Content-Type', 'application/json');
+                xhrText.onreadystatechange = function() {
+                    if (xhrText.readyState === XMLHttpRequest.DONE) {
+                        if (xhrText.status === 200) {
+                            console.log('Text message sent successfully.');
+                        } else {
+                            console.error('Error sending text message:', xhrText.status);
+                        }
+                    }
+                };
+                xhrText.send(JSON.stringify({
+                    chat_id: selectedGroup,
+                    text: gabungan,
+                    parse_mode: 'HTML'
+                }));
+            }
         }
     </script>
 @endsection

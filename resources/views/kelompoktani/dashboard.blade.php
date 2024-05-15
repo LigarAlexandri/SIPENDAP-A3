@@ -327,6 +327,7 @@
         max-height: 180px;
         padding: 15px 15px 15px 0;
         font-size: 0.95rem;
+        color: #000;
       }
       .chat-input span {
         align-self: flex-end;

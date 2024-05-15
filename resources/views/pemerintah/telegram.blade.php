@@ -141,9 +141,9 @@
 
                     <h2>Pilih Grup Telegram : </h2>
                     <select id="telegramGroup">
-                        <option value= "-1002122684774" >Grup Utama</option>
-                        <option value= "-1002097094091" >Kecamatan Panji</option>
-                        <option value= "-1002006597152" >Kecamatan Situbondo</option>
+                        <option value= "-1002122684774">Grup Utama</option>
+                        <option value= "-1002097094091">Kecamatan Panji</option>
+                        <option value= "-1002006597152">Kecamatan Situbondo</option>
                     </select>
 
                     <button type="button" id="kirim" value="KIRIM"
@@ -152,8 +152,8 @@
 
 
                     <button type="button" id="kirim" value="KIRIM"
-                    class="bg-green-500 hover:bg-green-500 text-white font-bold py-2 px-4 rounded mt-4"
-                    onclick="kirimPesanSemua()">Kirim ke Semua</button>
+                        class="bg-green-500 hover:bg-green-500 text-white font-bold py-2 px-4 rounded mt-4"
+                        onclick="kirimPesanSemua()">Kirim ke Semua</button>
 
                 </div>
             </div>
@@ -171,95 +171,79 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        function kirimPesanSemua(){
+        function kirimPesanSemua() {
             var judulOnly = document.getElementById('judul');
-            var isi_beritaOnly = document.getElementById('isi_berita');
             var judul = document.getElementById('judul').value;
+            var isi_beritaOnly = document.getElementById('isi_berita');
             var isi_berita = document.getElementById('isi_berita').value;
-            // var pesan = document.getElementById('thumbnail').value;
             var token = '6750609219:AAFbaG0pzoOYqfjMsx_t8jpswm5DlgYrln4'; // TELEGRAM TOKEN
-            var grup =  '-1002122684774'; // CHAT ID
-            var grup2 = '-1002097094091'; // CHAT ID
-            var grup3 = '-1002006597152'; // CHAT ID
-
+            var groups = ['-1002122684774', '-1002097094091', '-1002006597152']; // CHAT IDs
 
             // Get the file input element
             var fileInput = document.getElementById('fileInput');
             var file = fileInput.files[0];
 
-            // Create FormData object to send both text and image (Form untuk grup 1)
-            var formData = new FormData();
-            formData.append('chat_id', grup2);
-            formData.append('caption', `${judul}\n${isi_berita}`);
-            formData.append('photo', file);
+            var gabungan = `${judul}\n${isi_berita}`;
 
-            // // Create FormData object to send both text and image (Form untuk grup 2)
-            // var formData2 = new FormData2();
-            // formData.append('chat_id', grup2);
-            // formData.append('caption', `${judul}\n${isi_berita}`);
-            // formData.append('photo', file2);
+            if (file) {
+                // If file is selected, send photo with caption to each group
+                groups.forEach(function(group) {
+                    var formData = new FormData();
+                    formData.append('chat_id', group);
+                    formData.append('caption', gabungan);
+                    formData.append('photo', file);
 
-            // // Create FormData object to send both text and image (Form untuk grup 3)
-            // var formData3 = new FormData3();
-            // formData.append('chat_id', grup3);
-            // formData.append('caption', `${judul}\n${isi_berita}`);
-            // formData.append('photo', file);
-
-            var gabungan = judulOnly.value + "%0A" + isi_beritaOnly.value;
-
-            // Create XMLHttpRequest to send the data (grup 1)
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', `https://api.telegram.org/bot${token}/sendPhoto`, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        console.log('Message sent successfully.');
-                    } else {
-                        console.error('Error sending message:', xhr.status);
-                    }
-                }
-            };
-            xhr.send(formData);
-
-
-
-
-
-            $.ajax({
-                url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
-                method: `POST`,
-            })
-
-            $.ajax({
-                url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup2}&text=${gabungan}&parse_mode=html`,
-                method: `POST`,
-            })
-
-            $.ajax({
-                url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup3}&text=${gabungan}&parse_mode=html`,
-                method: `POST`,
-            })
-
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', `https://api.telegram.org/bot${token}/sendPhoto`, true);
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            if (xhr.status === 200) {
+                                console.log(`Message with photo sent successfully to group ${group}.`);
+                            } else {
+                                console.error(`Error sending message with photo to group ${group}:`, xhr
+                                    .status);
+                            }
+                        }
+                    };
+                    xhr.send(formData);
+                });
+            } else {
+                // If no file is selected, send text message to each group
+                groups.forEach(function(group) {
+                    var xhrText = new XMLHttpRequest();
+                    xhrText.open('POST', `https://api.telegram.org/bot${token}/sendMessage`, true);
+                    xhrText.setRequestHeader('Content-Type', 'application/json');
+                    xhrText.onreadystatechange = function() {
+                        if (xhrText.readyState === XMLHttpRequest.DONE) {
+                            if (xhrText.status === 200) {
+                                console.log(`Text message sent successfully to group ${group}.`);
+                            } else {
+                                console.error(`Error sending text message to group ${group}:`, xhrText.status);
+                            }
+                        }
+                    };
+                    xhrText.send(JSON.stringify({
+                        chat_id: group,
+                        text: gabungan,
+                        parse_mode: 'HTML'
+                    }));
+                });
+            }
         }
+
 
 
         function kirimPesan() {
             var judulOnly = document.getElementById('judul');
-            var isi_beritaOnly = document.getElementById('isi_berita');
-
             var judul = document.getElementById('judul').value;
+            var isi_beritaOnly = document.getElementById('isi_berita');
             var isi_berita = document.getElementById('isi_berita').value;
-            // var pesan = document.getElementById('thumbnail').value;
             var token = '6750609219:AAFbaG0pzoOYqfjMsx_t8jpswm5DlgYrln4'; // TELEGRAM TOKEN
-            var grup = '-1002122684774'; // CHAT ID
-            var grup2 = '-1002097094091'; // CHAT ID
-            var grup3 = '-1002006597152'; // CHAT ID
-            // var grupList = [grup, grup2, grup3]; // Array of group IDs
 
-            //getinput telegram
+            // Get the selected Telegram group
             var selectedGroup = document.getElementById("telegramGroup").value;
 
-            // Get the file input element
+            // Get the file input element and file
             var fileInput = document.getElementById('fileInput');
             var file = fileInput.files[0];
 
@@ -267,61 +251,44 @@
             var formData = new FormData();
             formData.append('chat_id', selectedGroup);
             formData.append('caption', `${judul}\n${isi_berita}`);
-            formData.append('photo', file);
 
-            var gabungan = judulOnly.value + "%0A" + isi_beritaOnly.value;
+            if (file) {
+                formData.append('photo', file);
 
-
-            // Create XMLHttpRequest to send the data
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', `https://api.telegram.org/bot${token}/sendPhoto`, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        console.log('Message sent successfully.');
-                    } else {
-                        console.error('Error sending message:', xhr.status);
+                // Create XMLHttpRequest to send the data
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', `https://api.telegram.org/bot${token}/sendPhoto`, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            console.log('Message sent successfully.');
+                        } else {
+                            console.error('Error sending message:', xhr.status);
+                        }
                     }
-                }
-            };
-            xhr.send(formData);
-
-            // grupList.forEach(function(groupId) {
-            //     $.ajax({
-            //         url: `https://api.telegram.org/bot${token}/sendMessage`,
-            //         method: `POST`,
-            //         data: {
-            //             chat_id: groupId,
-            //             text: message,
-            //             parse_mode: 'html'
-            //         },
-            //         success: function(response) {
-            //             console.log("Message sent to group ID: " + groupId);
-            //             console.log(response);
-            //         },
-            //         error: function(xhr, status, error) {
-            //             console.error("Error sending message to group ID: " + groupId);
-            //             console.error(error);
-            //         }
-            //     });
-            // });
-
-            $.ajax({
-                url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${selectedGroup}&text=${gabungan}&parse_mode=html`,
-                method: `POST`,
-            })
-
-
-
-            // $.ajax({
-            //     url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup2}&text=${gabungan}&parse_mode=html`,
-            //     method: `POST`,
-            // })
-
-            // $.ajax({
-            //     url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup3}&text=${gabungan}&parse_mode=html`,
-            //     method: `POST`,
-            // })
+                };
+                xhr.send(formData);
+            } else {
+                // Send a regular text message if no file is selected
+                var gabungan = judulOnly.value + "\n" + isi_beritaOnly.value;
+                var xhrText = new XMLHttpRequest();
+                xhrText.open('POST', `https://api.telegram.org/bot${token}/sendMessage`, true);
+                xhrText.setRequestHeader('Content-Type', 'application/json');
+                xhrText.onreadystatechange = function() {
+                    if (xhrText.readyState === XMLHttpRequest.DONE) {
+                        if (xhrText.status === 200) {
+                            console.log('Text message sent successfully.');
+                        } else {
+                            console.error('Error sending text message:', xhrText.status);
+                        }
+                    }
+                };
+                xhrText.send(JSON.stringify({
+                    chat_id: selectedGroup,
+                    text: gabungan,
+                    parse_mode: 'HTML'
+                }));
+            }
         }
     </script>
 @endsection
