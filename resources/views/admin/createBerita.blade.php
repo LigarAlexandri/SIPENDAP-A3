@@ -3,9 +3,9 @@
 @section('container')
     <div class="relative flex items-center">
         <aside id="default-sidebar"
-            class="mt-[55px] left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+            class="top-0 left-0 z-10 w-64 h-full fixed transition-transform -translate-x-full sm:translate-x-0"
             aria-label="Sidebar">
-            <div class="h-full px-3 py-4 overflow-y-auto bg-white shadow-md  rounded-r-[2xl]">
+            <div class="h-full px-3 py-20 overflow-y-auto bg-white shadow-md  rounded-r-[2xl]">
                 <ul class="space-y-2 font-medium">
                     <li>
                         <a href="#"
@@ -106,9 +106,9 @@
                         <label for="isi_berita" class="block mb-2 text-sm font-medium text-gray-900"></label>
                         <div
                             class="overflow-hidden rounded-lg w-1/2 h-64 border border-gray-300 focus-within:border-[#F5682A] focus-within:ring-1 focus-within:ring-[#F5682A]">
-                            <pre id="isi_berita" name="isi_berita"
+                            <textarea id="isi_berita" name="isi_berita"
                                 class="p-2 w-full h-full resize-none border-none align-top focus:ring-0 sm:text-sm"
-                                placeholder="Tuliskan Isi Berita..."></pre>
+                                placeholder="Tuliskan Isi Berita..."></textarea>
                         </div>
                         @error('isi_berita')
                             <p class="text-red-500 text-sm font-medium py-2 capitalize" role="alert">{{ $message }}</p>

@@ -12,7 +12,7 @@
   </head>
   <body>
 
-  {{-- @include('navbar.nav') --}}
+  @include('sidebar.admin')
   @yield('container')
 
 
