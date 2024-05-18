@@ -73,6 +73,15 @@
                     <span class="flex-1 ms-3 whitespace-nowrap">Telegram</span>
                 </a>
             </li>
+            <br>
+            <li>
+                @if (Auth::user()->roles_id == 1)
+                    <a href=/buatberita
+                        class="button bg-[#72B944] hover:bg-green-500 text-white font-bold py-2 px-8 rounded mt-12 ml-2">Tambah
+                        Berita</a>
+                @else
+                @endif
+            </li>
         </ul>
     </div>
 </aside>

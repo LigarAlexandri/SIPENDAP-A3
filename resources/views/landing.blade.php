@@ -7,11 +7,10 @@
     <title>Test Homepage</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-  
+    <link rel="icon" href="public/img/sipendapicon.png" type="image/png">
     @vite(['resources/css/app.css','resources/js/app.js'])
   </head>
 <body>
-  
   
   <div class="video-background">
     <video autoplay muted loop playsinline>
@@ -81,9 +80,6 @@
     </div>
   
   <style>
-  body{
-      background-image:linear-gradient( #72B944, #FFFFFF);
-  }
   
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
   
@@ -210,9 +206,8 @@
   .membantu {
       justify-content: center; /* Center horizontally */
       align-items: center; /* Center vertically */
-      height: 100%; /* Ensure content takes up full height */
       text-align: center; /* Center text */
-      margin-bottom: 250px;
+      margin-bottom: 50px;
   }
   
   .glass-rectangle {
@@ -258,9 +253,13 @@
   }
   
   video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
   }
   .content {
       position: absolute;
@@ -295,7 +294,7 @@
   
   .scroller {
       max-width: 900px;
-      margin-bottom: 
+      margin-bottom: 200px;
     }
     
     .scroller__inner {
@@ -349,7 +348,7 @@
       margin-top: 400px;
       min-block-size: 100vh;
       place-content: center;
-      font-family: system-ui;
+      font-family: system-ui; 
       font-size: 1.125rem;
     }
     

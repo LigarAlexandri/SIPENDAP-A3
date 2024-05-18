@@ -1,9 +1,6 @@
 @extends('layout.admin')
-
 @section('container')
     <div class=" relative inline-flex items-center justify-center">
-    
-
     <div class="ml-[650px] space-y-[600px]">
         <div class="mb-[60px] ml-16 mt-16">
             <h1 class=" text-5xl font-bold">Halo, <span class=" text-white">Admin</span> !</h1>
@@ -18,11 +15,11 @@
                     </button>
                 </a>
 
-                <a href="/">
+                <a href="/telegramadmin">
                     <button
                         class="flex flex-col ml-[350px] space-between items-center justify-center mb-28 -mt-[500px] bg-white border-2 border-[#72B944] rounded-3xl h-[450px] w-[300px]">
                         <img src="img/notif.png" alt="" class="w-[250px] pb-16">
-                        <p class=" font-bold text-2xl w-60">Notifikasi</p>
+                        <p class=" font-bold text-2xl w-60">Telegram</p>
                     </button>
                 </a>
 
