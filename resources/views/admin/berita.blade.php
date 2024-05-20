@@ -1,12 +1,7 @@
 @extends('layout.addberita')
 @section('container')
+
     <div class="flex flex-col mt-12 h-[1280px]">
-
-        <div class="moving-container w-full bg-green-950">
-            {{-- <img src="/img/berita.png" alt="Moving Image" class="moving-image"> --}}
-            <div class="moving-text text-white">--NONA BERGERAK--</div>
-        </div>
-
         <div class="flex flex-col ml-80">
             @if ($broadcastBerita->count() > 0)
                 <?php $no = 1; ?>
@@ -16,15 +11,14 @@
                             <div class="items-center md:max-w-[500px] h-[380px] ml-12 mt-10 flex">
                                 <img src="{{ url('img/' . $bb->thumbnail) }}" class="w-[500px]">
                             </div>
-    
-    
+
                             <div class="  bg-white border p-6 flex flex-row justify-between rounded-xl">
                                 <div class="flex flex-col w-[720px] h-full">
                                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $bb->judul }}
                                     </h5>
                                     <p class="truncate tracking-tight text-gray-900">{{ $bb->isi_berita }}</p>
                                 </div>
-    
+
                                 <div class="flex gap-4">
                                     <a href="{{ route('detail.berita', $bb->id) }}"
                                         class="items-center justify-center w-48 h-10 bg-[#F5682A] hover:bg-[#F54C2A] flex hover:cursor-pointer text-white font-medium py-2 px-4 rounded">
@@ -44,13 +38,13 @@
                                                     d="m15.909 4.561l-4.47-4.47c-.146-.146-.338-.113-.427.073l-.599 1.248l4.175 4.175l1.248-.599c.186-.089.219-.282.073-.427zM9.615 2.115L5.5 2.458c-.273.034-.501.092-.58.449v.001C3.804 8.268 0 13.499 0 13.499l.896.896l4.25-4.25a1.5 1.5 0 1 1 .707.707l-4.25 4.25l.896.896s5.231-3.804 10.591-4.92h.001c.357-.078.415-.306.449-.58l.343-4.115l-4.269-4.269z" />
                                             </svg>
                                         </a>
-    
+
                                         <button id="deleteButton/{{ $bb->id }}"
                                             data-modal-target="deleteModal/{{ $bb->id }}"
                                             data-modal-toggle="deleteModal/{{ $bb->id }}"
                                             class="items-center justify-center w-16 h-10 button bg-red-500 flex hover:cursor-pointer hover:bg-red-700 text-white font-medium py-2 px-4 rounded"
-                                            type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 512 512">
+                                            type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 512 512">
                                                 <path fill="none"
                                                     d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z" />
                                                 <path fill="white"
@@ -91,14 +85,22 @@
                 <h1 class="py-4 px-12 text-m font-medium text-gray-900">Belum Ada Berita...</h1>
             @endif
         </div>
-        </div>
-        </div>
+    </div>
+    </div>
 
     </div>
 
     <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
         body {
             background-image: linear-gradient(#72B944, #FFFFFF);
+            background-attachment: fixed;
+
         }
 
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
@@ -116,7 +118,7 @@
             align-items: center;
             overflow: hidden;
         }
-    
+
         .moving-image {
             position: absolute;
             width: 200px;
@@ -126,7 +128,7 @@
             transform: translateY(-50%);
             animation: moveHorizontally 10s linear infinite;
         }
-    
+
         .moving-text {
             position: absolute;
             top: 0%;
@@ -136,26 +138,30 @@
             color: #FFFFFF;
             animation: moveText 5s linear infinite;
         }
-    
+
         @keyframes moveHorizontally {
             0% {
                 left: -100px;
             }
+
             50% {
                 left: calc(100% - 100px);
             }
+
             100% {
                 left: -100px;
             }
         }
-    
+
         @keyframes moveText {
             0% {
                 left: 100%;
             }
+
             50% {
                 left: calc(50% - 50px);
             }
+
             100% {
                 left: 100%;
             }

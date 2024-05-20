@@ -1,6 +1,6 @@
 @extends('layout.admin')
 @section('container')
-    <div class=" relative inline-flex items-center justify-center">
+    <div class="relative inline-flex items-center justify-center">
     <div class="ml-[650px] space-y-[600px]">
         <div class="mb-[60px] ml-16 mt-16">
             <h1 class=" text-5xl font-bold">Halo, <span class=" text-white">Admin</span> !</h1>
@@ -29,8 +29,15 @@
     </div>
 
     <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
         body {
             background-image: linear-gradient(#72B944, #FFFFFF);
+            background-attachment: fixed;
+
         }
-    </style>
 @endsection

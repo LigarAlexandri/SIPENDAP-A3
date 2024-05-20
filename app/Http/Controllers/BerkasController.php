@@ -3,63 +3,32 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berkas;
+use App\Models\Petani;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Mpdf\Tag\H1;
+use PDF;
 
 class BerkasController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+
+    public function view_rdkk()
     {
-        //
+        $datapetani = Petani::all();
+
+        return view('pemerintah.rdkk', compact('datapetani'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function view_pdf()
     {
-        //
+        $mpdf = new \Mpdf\Mpdf();
+        $datapetani = Petani::all();
+        $html = view('pemerintah.rdkk', compact('datapetani'));
+        $mpdf->WriteHTML($html);
+        $mpdf->Output('nama_file.pdf', 'I');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Berkas $berkas)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Berkas $berkas)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Berkas $berkas)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Berkas $berkas)
-    {
-        //
-    }
+    
+    
 }

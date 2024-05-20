@@ -12,10 +12,14 @@
   </head>
   <body>
 
-  @include('sidebar.addberita')
+  @if (Auth::user()->roles_id == 1)
+    @include('sidebar.addberita')
+  @elseif (Auth::user()->roles_id == 2)
+    @include('sidebar.pemerintah')
+  @elseif (Auth::user()->roles_id == 3)
+    @include('sidebar.kelompoktani')
+  @endif
   @yield('container')
 
-
-    
   </body>
 </html>

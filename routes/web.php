@@ -3,11 +3,15 @@
 use App\Models\User;
 use App\Http\Controllers\Login_C;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KiosController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PemerintahController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\BerkasController;
+use App\Http\Controllers\DaftarPemerintah;
+use App\Http\Controllers\DaftarKelompokTani;
+use App\Http\Controllers\PemerintahController;
 use App\Http\Controllers\RegisterPetaniController;
-use App\Models\Berita;
+use App\Models\Pemerintah;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +25,7 @@ use App\Models\Berita;
 */
 
 
-
+// Landing page
 Route::get('/', function () {return view('landing');});
 
 
@@ -31,25 +35,33 @@ Route::get('/daftar',[RegisterPetaniController::class,'petani']);
 Route::post('/daftar', [RegisterPetaniController::class,"regisPetani"]);
 Route::get('/datapetani/{id}', [RegisterPetaniController::class,"lihat"]);
 Route::get('/verifikasi', [RegisterPetaniController::class, "verif"]);
-// Route::get('/register', function () {return view('kelompoktani.daftar');});
 Route::get('/home', function () { return view('kelompoktani.dashboard');});
 
 
 // Pemerintah
-
-// Route::get('/dashboard',[PemerintahController::class,'index']);
 Route::get('/dashboard', function () {return view('pemerintah.dashboard');});
-Route::get('/verif',[PemerintahController::class,'lihat']);
-Route::put('/verif',[PemerintahController::class,'edit']);
+Route::get('/verifpetani',[PemerintahController::class,'lihat']);
+Route::put('/verifpetani',[PemerintahController::class,'edit']);
+Route::get('/ubahverif/{id}',[PemerintahController::class,'ubahverif']);
 Route::get('/keltani',[PemerintahController::class,'kelompok']);
 Route::get('/keltani/{id}',[PemerintahController::class,'detailkelompok']);
+Route::get('/daftar-kelompok-tani',[DaftarKelompokTani::class,'kelompoktani']);
+Route::post('/daftar-kelompok-tani',[DaftarKelompokTani::class,"regiskeltani"]);
+Route::get('/view/laporan',[PemerintahController::class,"showFiles"]);
+Route::get('/coba',[PemerintahController::class,"cobafile"]);
+Route::get('/laporan/{id}',[PemerintahController::class,"viewer"]);
+Route::post('/coba',[PemerintahController::class,"store"]);
+Route::post('/view/laporan',[PemerintahController::class,"download"]);
+Route::get('/rdkk',[BerkasController::class,"view_rdkk"]);
+Route::get('/rdkk/view',[BerkasController::class,"view_pdf"]);
+Route::get('/verif/laporan',[PemerintahController::class,"verif_laporan"]);
 Route::get('/telegram', function () {return view('pemerintah.telegram');});
-
-// Route::get('/verif',[PemerintahController::class,'regisPetani']);
 
 
 // Admin
 Route::get('/admin', function () {return view('admin.dashboard');});
+Route::get('/daftar/pemerintah',[DaftarPemerintah::class,'pemerintahan']);
+Route::post('/daftar/pemerintah',[DaftarPemerintah::class,'regispemerintah']);
 Route::get('/berita',  [BeritaController::class,'index']);
 Route::get('/buatberita', [BeritaController::class,'create']);
 Route::get('/buatberita', [BeritaController::class,'create']);
@@ -61,10 +73,7 @@ Route::get('/detailberita/{id}',  [BeritaController::class,'detail'])->name('det
 Route::get('/telegramadmin', function () {return view('admin.telegram');});
 
 
-
-
 // Auth
 Route::get('/login',[LoginController::class,'user']);
 Route::post('/login',[LoginController::class,'authenticate']);
-
 

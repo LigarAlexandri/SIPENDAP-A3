@@ -1,13 +1,6 @@
 @extends('layout.pemerintah')
 @section('container')
-{{-- @php
-   $berkas = Berkas::all();
-   $datapetani = Petani::all();
-   $idBerkasPetani = $datapetani->pluck('berkas_id')->toArray();
-   $berkasTerpilih = $berkas->whereIn('id', $idBerkasPetani);
-   dd($berkasTerpilih);
-@endphp --}}
-{{-- @dd($lahan_user) --}}
+
      <div class="flex absolute top-32 px-[340px] rounded-xl ">
       <table class="rounded-xl w-full table-auto">
           <thead class="bg-white rounded-xl">
@@ -53,19 +46,19 @@
                        </a>
                     </td>
                     <td class="flex content-center items-center justify-center">
-                     @if ($petani->DataLahan) <!-- Check if there is a related DataLahan -->
-                     <div class="relative z-0 group">
-                        <p>{{ $petani->DataLahan->status }}</p> <!-- Displaying the ID, change to other property as necessary -->
-                     </div>
-                     @endif
+                       @if ($petani->datalahan) <!-- Check if there is a related DataLahan -->
+                           <div class="relative z-0 group">
+                              <p>{{ $petani->datalahan->status }}</p> <!-- Displaying the ID, change to other property as necessary -->
+                           </div>
+                       @endif
                     </td>
                     <td class="">
                        <div class="px-3">{{ $tgl }}</div>
                     </td>
                     <td class=" flex justify-center">
-                     @if ($petani->Berkas) <!-- Check if there is a related DataLahan -->
+                     @if ($petani->berkas) <!-- Check if there is a related DataLahan -->
                      <div class="relative z-0 group">
-                        <p>{{ $petani->Berkas->status }}</p> <!-- Displaying the ID, change to other property as necessary -->
+                        <p>{{ $petani->berkas->status }}</p> <!-- Displaying the ID, change to other property as necessary -->
                      </div>
                      @endif
                     </td>
@@ -83,15 +76,15 @@
                      @endif
                    </td>
                    <td class="px-4 py-4">
-                     <a href="">
+                     <a href="/ubahverif/{{ $dp->id }}">
                         <img src="/img/edit.png" alt="" class="h-7 w-7">
                      </a>
                    </td>
-     
                 </tr>
                 @endforeach
             </tbody>
          </form>
+        </table>
 
           <script>
             document.getElementById('tambah').onclick = function(event) {

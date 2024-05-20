@@ -652,15 +652,15 @@
       // Define responses based on user input using if-else conditions
       let response;
       if (userMessage.toLowerCase().includes("halo")) {
-          response = "Halo! Ada yang bisa saya bantu? Mohon Ketik 1 untuk Penjelasan, Ketik 2 untuk Cara Penggunaan";
+        response = "Halo!\nAda yang bisa saya bantu?\nMohon Ketik 1 untuk Penjelasan, Ketik 2 untuk Cara Penggunaan";
       } else if (userMessage.toLowerCase().includes("1")) {
-          response = "SIPENDAP adalah Sistem Pendistribusian Pupuk subsidi yang lebih efisien!😊 (Ada lagi yang ingin ditanyakan?(Ketik iya/tidak))";
+          response = "SIPENDAP adalah Sistem Pendistribusian Pupuk subsidi yang lebih efisien!😊 \n\n (Ada lagi yang ingin ditanyakan?)\n(Ketik iya/tidak)";
       } else if (userMessage.toLowerCase().includes("2")) {
-          response = "Cara menggunakan SIPENDAP adalah, silahkan Login terlebih dahulu ya!(Ada lagi yang ingin ditanyakan?(Ketik iya/tidak))";
+          response = "Cara menggunakan SIPENDAP adalah, silahkan Login terlebih dahulu ya! \n\n (Ada lagi yang ingin ditanyakan?)\n(Ketik iya/tidak)";
       } else if (userMessage.toLowerCase().includes("tidak")) {
           response = "Terimakasih :)";
       } else if (userMessage.toLowerCase().includes("iya")) {
-          response = "Baik, masih ada yang belum jelas??? Ketik 1 untuk penjelasan, Ketik 2 untuk cara penggunaan!";
+          response = "Baik, masih ada yang belum jelas??? \n Ketik 1 untuk penjelasan, \n Ketik 2 untuk cara penggunaan!";
       } else {
           // Default response if no specific condition matches
           response = "Wah maaf, saya masih belum bisa menjawab itu, mohon untuk pilih sesuai dengan angka ya!";
