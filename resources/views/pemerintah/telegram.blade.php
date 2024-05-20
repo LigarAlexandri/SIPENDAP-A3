@@ -141,7 +141,7 @@
             var judul = document.getElementById('judul').value;
             var isi_beritaOnly = document.getElementById('isi_berita');
             var isi_berita = document.getElementById('isi_berita').value;
-            var token = '6750609219:AAFbaG0pzoOYqfjMsx_t8jpswm5DlgYrln4'; // TELEGRAM TOKEN
+            var token = '6336139546:AAHg486g1q6OQJhGowdW0_8PLz7ZbeRN9B8'; // TELEGRAM TOKEN
 
             // Get the selected Telegram group
             var selectedGroup = document.getElementById("telegramGroup").value;
